@@ -1,0 +1,294 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    display: flex;
+    padding: 10px;
+    padding-left: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .arrow {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    left: 10px;
+}
+
+header .arrow a {
+    color: white;
+}
+
+header .social {
+    display: flex;
+}
+
+header .social .icon {
+    margin: 3px;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+header .social .icon i {
+    color: white;
+}
+
+nav .breadcrumb {
+    padding: 10px;
+}
+
+body .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+body .wrapper {
+    width: 600px;
+    padding: 30px;
+    border-radius: 3px;
+    background-image: linear-gradient(#f6f7f8, rgb(255, 255, 255));
+    box-shadow: 9px 9px 15px -10px;
+}
+
+body .wrapper .head {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body .wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+body .wrapper .field {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 10px 05px;
+}
+
+body .wrapper .result {
+    text-align: center;
+    display: block;
+    padding: 0 0;
+    color: blue;
+}
+
+body .wrapper .input {
+    width: 100%;
+}
+
+body .wrapper .input .in {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 10px;
+    border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+body .wrapper .input .in:hover {
+    border: 1px solid blue;
+}
+
+body .wrapper .input .in i {
+    font-size: 20px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border-radius: 10px;
+    background: #dad2d2;
+    box-shadow: -5px -5px 10px #948f8f, 5px 5px 10px #ffffff; */
+}
+
+body .wrapper .input .in .box {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+body .wrapper .remember {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+body .wrapper .remember #rem {
+    margin-right: 5px;
+}
+
+body .wrapper .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .wrapper .btn .button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 60%;
+    padding: 10px 10px;
+    font-size: 10px;
+    margin: 30px 0;
+    border-radius: 3px;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(112, 112, 202);
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body .wrapper .btn .button:hover {
+    background: #0026ff;
+    color: white;
+    border: none;
+}
+
+body .wrapper .forgot {
+    font-size: 15px;
+    text-align: center;
+}
+
+body .wrapper .forgot .for {
+    color: black;
+}
+
+body .wrapper .forgot a {
+    text-decoration: none;
+    margin: 0 2px;
+}
+
+.or h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+. .field-btn {
+    display: inline;
+}
+
+.login {
+    display: flex;
+}
+
+.login .log {
+    height: 20px;
+    padding: 20px 10px;
+    width: 100%;
+    outline: none;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.login .google {
+    background-color: rgb(238, 59, 59);
+}
+
+.login .google:hover {
+    background-color: red;
+}
+
+.login .facebook {
+    background-color: rgb(55, 109, 209);
+}
+
+.login .facebook:hover {
+    background-color: rgb(23, 7, 255);
+}
+
+.login .log i {
+    color: white;
+    padding: 10px;
+}
+
+.login .log .text {
+    color: white;
+}
+
+footer {
+    position: absolute;
+    background-color: #0037ff;
+    width: 100%;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width:700px) {
+    body .wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    .login {
+        flex-direction: column;
+    }
+    body .wrapper .field {
+        flex-direction: column;
+    }
+    body .wrapper .input .in {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    body .wrapper .btn .button {
+        width: 100%;
+    }
+    body .wrapper .forgot {
+        font-size: 10px;
+    }
+}
