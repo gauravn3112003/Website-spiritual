@@ -12,45 +12,40 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            Spiritual_codes
-        </div>
-        <nav class="height  ">
-            <div class="list">
-                <i class="bi bi-list listli "></i>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                Spiritual_Codes
             </div>
-            <ul class=" visible">
+            <ul class="menu ">
                 <div class="img">
-                    <img src="../1.png" alt="img">
+                    <img src="../1.png" alt="">
                 </div>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
                 <li><a href="#">Blog</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
                 <div class="btn">
-                    <div class="user">
-                        <div class="icon">
-                            <i class="bi bi-facebook"></i>
-                        </div>
-                        <div class="name">
-                            gaurav
-                        </div>
-                    </div>
-                    <button>Sign Out</button>
+                    <a id="user" href="#">
+                        <i class="bi bi-person-circle"></i> Gaurav
+                    </a>
+                    <a href="../signIN.html" id="sign-out">Sign Out</a>
                 </div>
             </ul>
-        </nav>
-    </header>
-
+            <div class="burger">
+                <i class="bi bi-list listli"></i>
+            </div>
+        </div>
+    </nav>
     <script>
-        listli = document.querySelector('.listli');
-        navbar = document.querySelector('nav');
-        navlist = document.querySelector('ul');
-        listli.addEventListener('click', () => {
-            navbar.classList.toggle('height');
-            navlist.classList.toggle('visible');
+        burger = document.querySelector('.burger');
+        menu = document.querySelector('ul');
+        btn = document.querySelector('.listli');
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            btn.classList.toggle('active');
+
         })
     </script>
 </body>
