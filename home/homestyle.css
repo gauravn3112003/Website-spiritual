@@ -4,217 +4,165 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Lato', sans-serif;
-}
-
-body {
-    height: 100vh;
-    width: 100%;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    height: 50px;
-}
-
-header .logo {
-    font-weight: 900;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    display: grid;
-    place-items: center;
-    letter-spacing: 2px;
-}
-
-header nav {
-    height: auto;
-    margin-top: 5px;
-    /* position: relative; */
-    top: 0px;
-    display: grid;
-    place-items: center;
-    transition: all 0.2s ease-in;
-}
-
-header nav .list {
-    top: 1px;
-    position: absolute;
-    right: 20px;
-    top: 2px;
-    display: none;
-    place-items: center;
-}
-
-header nav .list i {
-    color: rgb(0, 0, 0);
-}
-
-header ul {
-    display: flex;
-    margin: 0px 0;
-    padding: 0;
-    align-items: center;
-}
-
-header ul .img {
-    display: none;
-}
-
-header ul li {
-    list-style: none;
-    margin: 0px 30px;
-}
-
-header ul li a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.685);
+    list-style: none;
 }
 
-header ul li a:hover {
-    color: black;
-    text-decoration: underline;
-}
-
-header .user {
-    display: flex;
-    padding: 1px 10px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    background-color: white;
-    outline: none;
-    border: none;
-    justify-content: center;
-    align-items: center;
-}
-
-header .user .icon {
-    margin: 0 10px;
-    background-color: white;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
-
-.btn {
-    display: flex;
-}
-
-header button {
-    padding: 5px 10px;
-    margin: 0 5px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background-color: rgb(65, 65, 243);
-    color: white;
-    font-weight: 700;
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
 
-header button:hover {
-    background-color: blue;
+.max-width {
+    width: 100%;
+    padding: 0 30px;
+    margin: auto;
 }
 
-@media only screen and (max-width:990px) {
-    header .logo {
-        font-size: 15px;
-    }
-    header ul li {
-        margin: 0 15px;
-    }
-    header ul li a {
-        font-size: 10px;
-    }
-    header .user {
-        padding: 2px 5px;
-    }
-    header .user .icon {
-        font-size: 10px
-    }
-    header .user .name {
-        font-size: 10px;
-        font-weight: 700;
-    }
-    header button {
-        font-size: 10px;
-    }
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media only screen and (max-width:200px) {
-    header .logo {
-        font-size: 10px;
-    }
+.navbar .max-width .logo {
+    font-weight: 800;
+    font-size: 20px;
 }
 
-@media only screen and (max-width:660px) {
-    header {
-        border-bottom: 1px solid black;
-    }
-    header nav {
-        position: absolute;
-        /*         display:none; */
-        right: 0px;
-        padding: 20px 0;
-        background-color: blue;
-        flex-direction: column;
-        width: 95%;
-        height: 100%;
-        border-top-left-radius: 10px;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    header ul .img {
-        display: inline;
-        border: 2px solid white;
-        width: 50px;
-        position: absolute;
-        height: 50px;
-        border-radius: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 10%;
-        overflow: hidden;
-    }
-    nav ul li a {
-        color: white;
-        
-        font-size: 20px;
-    }
-    nav ul .user {
-        margin-top: 10px;
-    }
-    nav ul button {
-        margin: 10px;
-    }
-    header nav .list {
-        display: inline;
-    }
-    .visible {
-        display: none;
-    }
-    .height {
-        width: 40px;
-        padding: 0;
-        height: 20px;
-        background-color: rgb(255, 255, 255);
-    }
-    .btn {
-        position: absolute;
-        bottom: 10px;
-        justify-content: space-around;
-        align-items: center;
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.img {
+    display: none;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: rgb(0, 26, 255);
+}
+
+.navbar ul .btn a {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 0 2px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar ul #user {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+.navbar ul .btn a i {
+    color: rgb(0, 0, 0);
+    margin: 0 2px;
+}
+
+.navbar ul #sign-out {
+    border: none;
+    background-color: rgb(0, 4, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.navbar ul #sign-out:hover {
+    background-color: rgb(0, 1, 87);
+}
+
+.navbar .max-width .burger {
+    display: none;
+}
+
+@media (max-width: 974px) {
+    .max-width {
+        padding: 0 20px;
         width: 100%;
-        border: 1px solid red;
     }
-    .btn .user {
-        margin: 0 0;
+    .navbar ul .img {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 50px;
+        overflow: hidden;
+        top: 10%;
+    }
+    .navbar .max-width .burger {
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+    .burger i .active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        background-color: rgb(3, 8, 70);
+        height: 100vh;
+        width: 90%;
+        right: -100%;
+        top: 0px;
+        flex-direction: column;
+        border-top-left-radius: 10px;
+        transition: all 0.5s ease-in;
+    }
+    .navbar .active {
+        right: 0;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+        padding: 15px 0;
+    }
+    .navbar .menu li a {
+        color: white;
+        font-size: 18px;
+        font-weight: 800;
+        margin-left: 0px;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar ul .btn {
+        position: absolute;
+        bottom: 5%;
+    }
+    .navbar ul .btn a {
+        border: 1px solid white;
+        color: white;
+    }
+    .navbar ul .btn a i {
+        color: rgb(0, 0, 0);
     }
 }
