@@ -422,7 +422,7 @@ section .social i {
 section .box {
     max-width: 1200px;
     display: block;
-    padding: 10px;
+    padding: 30px 0;
     margin-top: 20px;
     margin: auto;
 }
@@ -438,7 +438,7 @@ section .box {
     width: 100%;
     font-size: 20px;
     background: #ffffff;
-    box-shadow: 15px 15px 40px #c5c5c5, -15px -15px 40px #ffffff;
+    box-shadow: 5px 5px 15px #c5c5c5, -5px -5px 15px #ffffff;
     margin-top: 30px;
     transition: all 0.5s ease;
 }
@@ -473,7 +473,7 @@ section .content {
     display: flex;
     flex-direction: column;
     /* border: 1px solid red; */
-    width: auto;
+    width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,19 +484,20 @@ section .content {
     box-shadow: -15px -15px -40px rgba(0, 0, 0, 0.165); */
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 15px 15px 40px #c5c5c5, -15px -15px 40px #ffffff;
+    box-shadow: 5px 5px 15px #c5c5c5, -5px -5px 15px #ffffff;
 }
 
 .wrapper .content img {
-    width: 300px;
+    width: 100%;
     border-radius: 10px;
     border: 2px solid rgba(53, 48, 48, 0.309);
+    padding: 20px 0;
 }
 
 .wrapper .content .head {
     /* border: 1px solid red; */
-    width: 300px;
-    padding: 10px 0;
+    width: 100%;
+    padding: 20px 0;
     font-size: 20px;
     font-weight: 800;
 }
@@ -505,7 +506,7 @@ section .content {
     text-align: justify;
     font-family: sans-serif;
     font-size: 12px;
-    width: 300px;
+    width: 100%;
     color: rgba(0, 0, 0, 0.582);
     /* margin-top: 20px; */
 }
@@ -515,6 +516,7 @@ section .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .wrapper .content .btn .date {
