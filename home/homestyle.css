@@ -417,6 +417,7 @@ section .social i {
     display: block;
     background-color: #fdfdfd;
     height: auto;
+    border: 1px solid red;
 }
 
 section .box {
@@ -551,6 +552,10 @@ section .content {
 
 /* proffession skills styling  */
 
+section .box {
+    /* border: 2px solid yellow; */
+}
+
 section .box .box-1 .head {
     font-size: 25px;
     font-weight: 900;
@@ -561,6 +566,8 @@ section .box .box-1 .head {
 section .box .box-1 .text {
     text-align: center;
     color: rgba(0, 0, 0, 0.466);
+    /* border: 2px solid yellow; */
+    padding: 10px;
 }
 
 section .box .skill-img {
@@ -598,10 +605,10 @@ section .box .box-1 .skills .skill .skill-1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4f1f5;
+    background-color: #f4f2f5;
     padding: 20px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 @media (max-width:1000px) {
@@ -610,9 +617,140 @@ section .box .box-1 .skills .skill .skill-1 {
     }
     section .box .box-1 .skills {
         width: 100%;
-        padding: 0 40px;
     }
     section .box .skill-img img {
+        width: 100%;
+    }
+}
+
+
+/* footer section stylings */
+
+footer {
+    width: 100%;
+    /* border: 1px solid red; */
+    height: auto;
+}
+
+footer .info {
+    height: auto;
+    background-color: #131212;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+
+footer .info .logo {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+footer .info .logo img {
+    width: 100%;
+}
+
+footer .info .text {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    margin-top: 10px;
+    max-width: 800px;
+}
+
+footer .info .content {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+}
+
+footer .info .content .box {
+    /* border: 1px solid black; */
+    padding: 10px;
+    width: 300px;
+    margin: 5px;
+}
+
+footer .info .content h2 {
+    border-left: 5px solid yellow;
+    padding: 0 20px;
+    color: violet;
+}
+
+footer .info .content ul {
+    margin: 10px 0;
+}
+
+footer .info .content ul li a {
+    color: white;
+    padding: 5px 20px;
+    opacity: 70%;
+    transition: all 0.8s ease;
+}
+
+footer .info .content ul li a:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
+footer .info .content .box form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+footer .info .content .box form .email {
+    background-color: transparent;
+    border: none;
+    outline: 0.5px solid red;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer .info .content .box form .btn {
+    border: none;
+    outline: none;
+    background-color: rgb(238, 10, 10);
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer .info .content .box form .btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+footer .copyright {
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    background-color: black;
+}
+
+footer .copyright span {
+    color: red;
+}
+
+@media (max-width:700px) {
+    footer .info .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .info .content .box {
+        width: 80%;
+    }
+    footer .info .text {
         width: 100%;
     }
 }
