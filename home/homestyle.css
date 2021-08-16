@@ -1,374 +1,811 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Spiritual codes</title>
-    <link rel="stylesheet" href="homestyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
-
-<body>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
 
 
-    <!-- navigation Bar -->
-    <nav class="navbar ">
-        <div class="max-width">
-            <div class="logo">
-                Spiritual_ <span>Codes</span>
-            </div>
-            <ul class="menu ">
-                <div class="img">
-                    <img src="../1.png" alt="">
-                </div>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#about">About Us</a></li>
-                <div class="btn">
-                    <a id="user" href="#">
-                        <i class="bi bi-person-circle"></i> Gaurav
-                    </a>
-                    <a href="../signIN.html" id="sign-out">Sign Out</a>
-                </div>
-            </ul>
-            <div class="burger">
-                <i class="bi bi-list listli"></i>
-            </div>
-        </div>
-    </nav>
+/* variables */
 
-    <!-- home screen -->
-    <section>
-        <div class="left">
-            <div class="container">
-                <div class="welcome">
-                    <!-- <h1 class="ml10">
-                        <span class="text-wrapper">
-                          <span class="letters">Welcome</span>
-                        </span>
-                    </h1> -->
-                </div>
-                <div class="head">
-                    Spiritual_<span>Codes</span>
-                </div>
-                <div class="title">
-                    <p>I'm <span id="spin"></span>!</p>
-                </div>
-                <div class="btn">
-                    <a href="#">Hire Me</a>
-                    <a href="#">Download CV</a>
-                </div>
-            </div>
-        </div>
-        <div class="right">
-            <img src="https://ouch-cdn2.icons8.com/b3Hk3CesrJJWCoO4GWS5NYPee8XLX9bX8cAKR6O1QDQ/rs:fit:784:1016/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTcz/L2QxNGFlZmI0LTEw/YTAtNDc0Zi05OWM1/LWQxNjViZmQ5MmFh/Zi5zdmc.png" alt="">
-        </div>
-        <div class="social">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-google"></i>
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-telegram"></i>
-        </div>
-    </section>
+:root {
+    --btn-color: rgb(255, 255, 255);
+    --btn-background: #b530fd;
+    --btn-hover-background: rgb(3, 6, 150);
+    /* --btn-shadow: 21px 21px 42px #d5d5d5, -21px -21px 42px #fbfbfb; */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://media.istockphoto.com/vectors/abstract-grey-and-white-tech-geometric-corporate-design-background-vector-id1177980696?k=6&m=1177980696&s=612x612&w=0&h=FcbfenfcYuvNfHzIWmov4bK9SKJVoarNqd6gx0jEAXU=);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 
-    <section class="wrapper">
+/* NAvigation Style */
 
-        <!-- about section  -->
-        <div class="box ">
-            <h1 id="home">
-                About
-            </h1>
-            <div class="about">
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: black 0 -6px 10px;
+}
 
-                <img src="https://media.istockphoto.com/photos/trendy-girl-singing-favorite-song-out-loud-in-phone-as-mic-wearing-picture-id1256944025?b=1&k=6&m=1256944025&s=170667a&w=0&h=lpTa7G24o7BydWM8aInha2-r6sUCXWkh2DfzpyzaxR4=" alt="">
+.sticky {
+    background-color: #ffffff;
+}
 
-                <h3>Spiritual Codes</h3>
-                <div class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officiis esse, assumenda quis vero saepe sit totam doloremque eligendi libero ratione et natus tenetur facilis voluptatum facere, beataetatibus!
-                </div>
-            </div>
-        </div>
+.max-width {
+    width: 100%;
+    padding: 0 30px;
+    margin: auto;
+}
 
-        <!-- proffesional skills sections -->
-        <div class="box">
-            <h1 id="home">
-                Skills
-            </h1>
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-            <div class="box-1">
-                <div class="head">
-                    Proffesional Skills
-                </div>
-                <div class="text">
-                    Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatum veniam dignissimos. Ducimus, voluptas hic tenetur corrupti, fuga, aut praesentium nobis quibusdam ob amet consectetur adipioremque.
-                </div>
-                <div class="skill-img">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">Html</div>
-                                <div class="percent">
-                                    85%
-                                </div>
-                            </div>
-                            <div class="line line-1">
-                            </div>
-                        </div>
+.navbar .max-width .logo {
+    font-weight: 800;
+    font-size: 20px;
+}
 
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">css</div>
-                                <div class="percent">
-                                    80%
-                                </div>
-                            </div>
-                            <div class="line line-2">
-                            </div>
-                        </div>
+.navbar .max-width .logo span {
+    color: red;
+}
 
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">php</div>
-                                <div class="percent">
-                                    60%
-                                </div>
-                            </div>
-                            <div class="line line-3">
-                            </div>
-                        </div>
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">mysql</div>
-                                <div class="percent">
-                                    50%
-                                </div>
-                            </div>
-                            <div class="line line-4">
-                            </div>
-                        </div>
+.img {
+    display: none;
+}
 
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">ui/ux</div>
-                                <div class="percent">
-                                    90%
-                                </div>
-                            </div>
-                            <div class="line line-5">
-                            </div>
-                        </div>
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    /* transition: all 0.3s ease; */
+}
 
-                        <div class="skill">
-                            <div class="skill-1">
-                                <div class="name">programming</div>
-                                <div class="percent">
-                                    80%
-                                </div>
-                            </div>
-                            <div class="line line-6">
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327__340.jpg" alt="img">
-                </div>
-            </div>
-        </div>
+.navbar ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 25px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    border-bottom: 5px solid transparent;
+}
 
-        <!-- project html  -->
-        <div class="box">
-            <h1 id="home">
-                Project
-            </h1>
-            <div class="projects">
-                <div class="content">
-                    <img src="https://cdn.pixabay.com/photo/2014/05/02/21/49/laptop-336373__340.jpg" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 03/11/2020
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
+.navbar ul li a:hover {
+    color: rgb(0, 26, 255);
+    border-bottom: 5px solid rgb(17, 0, 255);
+}
 
-                <div class="content">
-                    <img src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049__340.jpg" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 11/12/2021
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
+.navbar ul .btn {
+    margin: 0 10px;
+}
 
-                <div class="content">
-                    <img src="https://cdn.pixabay.com/photo/2015/05/31/15/18/technology-792180__340.jpg" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 08/12/2003
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="more">
-                <a href="#">More >>></a>
-            </div>
-        </div>
+.navbar ul .btn a {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 0 2px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar ul #user {
+    background-color: transparent;
+    color: black;
+    font-weight: 700;
+}
+
+.navbar ul .btn a i {
+    color: rgb(0, 0, 0);
+    margin: 0 2px;
+}
+
+.navbar ul #sign-out {
+    border: none;
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+    font-weight: 700;
+    box-shadow: var(--btn-shadow);
+}
+
+.navbar ul #sign-out:hover {
+    background-color: var(--btn-hover-background);
+}
+
+.navbar .max-width .burger {
+    display: none;
+}
 
 
+/* Resposive navigation bar style  */
 
-        <!-- blog's html  -->
-        <div class="box">
-            <h1 id="home">
-                Our Blog
-            </h1>
-            <div class="projects">
-                <div class="content">
-                    <img src="https://1.bp.blogspot.com/-QDjYOo0uN3w/YQOCAGvJ26I/AAAAAAAAAK8/bNM1JqvKmd8HnMEpovNfqbADjjZ_GC95ACLcBGAsYHQ/s320/Add%2Ba%2Bsubheading.png" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 03/11/2020
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
+@media (max-width: 974px) {
+    .max-width {
+        padding: 0 20px;
+        width: 100%;
+    }
+    .navbar ul .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 50px;
+        overflow: hidden;
+    }
+    .navbar ul .img img {
+        width: 80px;
+    }
+    .navbar .max-width .burger {
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+    .navbar .max-width .burger i {
+        font-size: 30px;
+    }
+    .burger .active {
+        color: rgb(0, 0, 0);
+    }
+    .navbar .menu {
+        position: fixed;
+        background-color: rgb(0, 1, 43);
+        height: 100vh;
+        width: 90%;
+        right: -100%;
+        top: 60px;
+        flex-direction: column;
+        border-top-left-radius: 20px;
+        /* border-bottom-left-radius: 20px; */
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar .active {
+        right: 0;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+    .navbar .menu li a {
+        color: white;
+        font-size: 18px;
+        font-weight: 800;
+        margin-left: 0px;
+    }
+    .navbar ul li a:hover {
+        color: rgb(255, 255, 255);
+        border-bottom: 5px solid red;
+    }
+    .navbar .menu li {
+        display: block;
+        padding: 0;
+    }
+    .navbar ul .btn {
+        position: absolute;
+        bottom: 20%;
+    }
+    .navbar ul .btn #user {
+        color: white;
+    }
+    .navbar ul .btn a {
+        border: 1px solid white;
+        color: white;
+    }
+    .navbar ul .btn a i {
+        color: rgb(255, 255, 255);
+    }
+}
 
-                <div class="content">
-                    <img src="https://1.bp.blogspot.com/-V1fL7BsKw7w/YO21J1DThjI/AAAAAAAAAKg/v6OwZSt3_loFqiL7o2C2w_8GMLlC485WACLcBGAsYHQ/s320/How%2Bto%2Bcreate%2Bdynamic%2Bcalculator%2Bby%2Busing%2BHTML%252C%2BCSS%2Band%2BPHP.jpg" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 11/12/2021
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="content">
-                    <img src="https://1.bp.blogspot.com/-4In1_Y7YpIk/YNx72aoAtaI/AAAAAAAAAKQ/jN3m2FavVwsG02rMURVlFTkLf7gVV_3EACLcBGAsYHQ/w400-h213/Reasons%2BYou%2BShouldn%25E2%2580%2599t%2BLearn%2Bto%2BCode.png" width="30px" alt="project1">
-                    <div class="head">
-                        Lorem, ipsum.
-                    </div>
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, labore. Cum ipsam ipsa illo totam laborum hic odio aperiam cumque!
-                    </div>
-                    <div class="btn">
-                        <div class="date">
-                            Date : 08/12/2003
-                        </div>
-                        <div class="btn-1">
-                            <a href="#">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="more">
-                <a href="#">More >>></a>
-            </div>
-        </div>
+/* home screen style  */
 
+body section {
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
 
+body section .left,
+.right {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
+body section .right img {
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
+body section .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* position: relative; */
+}
 
-    </section>
+body section .left .container {
+    /* margin-left: 40px; */
+    width: auto;
+    position: absolute;
+    /* border: 1px solid yellow; */
+    padding: 20px;
+    width: auto;
+}
 
 
+/*Welcome text animation */
+
+body section .left .container .welcome {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ml10 {
+    position: relative;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
 
 
+/* heading  */
 
-    <!-- footer section html -->
-    <footer>
-        <div class="info">
-            <div class="logo">
-                <img src="../1.png" alt="">
-            </div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos blanditiis mollitia sint ipsa necessitatibus officiis t totam sed? Unde non rem numquam perferendis incidunt minima, pariatur voluptatibus?
-            </div>
-            <div class="content">
-                <div class="box">
-                    <h2>Services</h2>
-                    <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">App Development</a></li>
-                        <li><a href="#">SEO Consaltent</a></li>
-                        <li><a href="#">Programmer</a></li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <h2>Pages</h2>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Desclimer</a></li>
-                        <li><a href="#">Terms and Condition</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <h2>Subscribe</h2>
-                    <form s action="#">
-                        <input type="email" class="email" name="Email" placeholder="example@gmail.com" id="">
-                        <input type="submit" class="btn" value="Subscribe">
-                    </form>
+body section .left .container .head {
+    font-size: 50px;
+    font-weight: 800;
+}
 
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2021 <span>spiritual codes. </span> All rights reserved
-        </div>
-    </footer>
-    <script src="../script.js"></script>
-    <script src="../navbar.js"></script>
-</body>
+body section .left .container .head span {
+    color: red;
+}
 
-</html>
+
+/* skill animation */
+
+section .container .title {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+#spin {
+    color: red;
+}
+
+#spin:after {
+    content: "";
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        content: "Web Developer";
+    }
+    10% {
+        content: "UI/UX Designer";
+    }
+    20% {
+        content: "Programmer";
+    }
+    30% {
+        content: "Coder";
+    }
+    40% {
+        content: "App Developer";
+    }
+    50% {
+        content: "Blogger";
+    }
+    60% {
+        content: "Content Creater";
+    }
+    70% {
+        content: "Influencer";
+    }
+    80% {
+        content: "Vlogger";
+    }
+    90% {
+        content: "Marketer";
+    }
+}
+
+
+/* button styling */
+
+section .container .btn {
+    display: flex;
+    /* border: 1px solid red; */
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container .btn a {
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+    border-radius: 5px;
+    box-shadow: var(--btn-shadow);
+}
+
+section .container .btn a:hover {
+    background-color: var(--btn-hover-background);
+}
+
+
+/* Social icons */
+
+section .social {
+    /* border: 1px solid red; */
+    position: absolute;
+    padding: 10px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .social i {
+    padding: 0 5px;
+}
+
+@media (max-width:705px) {
+    body section .left {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
+
+
+/* section 2nd */
+
+.wrapper {
+    padding: 10px;
+    display: block;
+    background-color: #fdfdfd;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+section .box {
+    max-width: 1200px;
+    display: block;
+    padding: 30px 0;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.box .more a {
+    /* border: 1px solid red; */
+    text-align: center;
+    display: block;
+    /* border: 1px solid red; */
+    padding: 20px 0;
+    width: 100%;
+    font-weight: 800;
+    width: 100%;
+    font-size: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #bfbdbda6, -5px -5px 10px #ffffffa1;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+}
+
+.box .more a:hover {
+    color: black;
+}
+
+section .box h1 {
+    padding: 2px 5px;
+    font-size: 30px;
+    border-left: 4px solid yellow;
+}
+
+section .box .text {
+    text-align: justify;
+    margin: 10px 0px;
+}
+
+
+/* about section stylings */
+
+.wrapper .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .about img {
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px #bfbdbda6, -5px -5px 10px #ffffffa1;
+    width: 60%;
+}
+
+.wrapper .about .text {
+    opacity: 50%;
+    text-align: center;
+}
+
+
+/* project sections */
+
+section .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+section .content {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 15px 15px 40px rgba(16, 16, 16, 0.165);
+    box-shadow: -15px -15px -40px rgba(0, 0, 0, 0.165); */
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #bfbdbda6, -5px -5px 10px #ffffffa1;
+}
+
+.wrapper .content img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(53, 48, 48, 0.309);
+    padding: 20px 0;
+}
+
+.wrapper .content .head {
+    /* border: 1px solid red; */
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.wrapper .content .text {
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 12px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.582);
+    /* margin-top: 20px; */
+}
+
+.wrapper .content .btn {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.wrapper .content .btn .date {
+    /* border: 1px solid red; */
+    width: 100%;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.wrapper .content .btn .btn-1 a {
+    font-size: 15px;
+    padding: 10px 50px;
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+}
+
+.wrapper .content .btn .btn-1 a:hover {
+    background-color: var(--btn-hover-background);
+}
+
+@media (max-width:550px) {
+    section .content {
+        width: 100%;
+        height: 450px;
+        justify-content: space-around;
+    }
+}
+
+
+/* proffession skills styling  */
+
+section .box .box-1 .head {
+    font-size: 25px;
+    font-weight: 900;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section .box .box-1 .text {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.466);
+    /* border: 2px solid yellow; */
+    padding: 10px;
+}
+
+section .box .skill-img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    /* flex-wrap: wrap; */
+    /* border: 2px solid red; */
+    padding: 20px;
+}
+
+section .box .skill-img img {
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px #bfbdbda6, -5px -5px 10px #ffffffa1;
+}
+
+section .box .box-1 .skills {
+    padding: 10px;
+    width: 50%;
+}
+
+section .box .box-1 .skills .skill {
+    margin: 20px 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 2px 2px 10px #bfbdbda6, -2px -2px 10px #ffffffa1;
+}
+
+section .box .box-1 .skills .skill .line {
+    height: 5px;
+    background-color: blue;
+}
+
+section .box .box-1 .skills .skill .line-1 {
+    width: 85%;
+}
+
+section .box .box-1 .skills .skill .line-2 {
+    width: 80%;
+}
+
+section .box .box-1 .skills .skill .line-3 {
+    width: 60%;
+}
+
+section .box .box-1 .skills .skill .line-4 {
+    width: 50%;
+}
+
+section .box .box-1 .skills .skill .line-5 {
+    width: 90%;
+}
+
+section .box .box-1 .skills .skill .line-6 {
+    width: 80%;
+}
+
+section .box .box-1 .skills .skill .skill-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+section .box .box-1 .skills .skill .skill-1 .name {
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width:1000px) {
+    section .box .skill-img {
+        flex-direction: column;
+    }
+    section .box .box-1 .skills {
+        width: 100%;
+    }
+    section .box .skill-img img {
+        width: 100%;
+    }
+}
+
+
+/* footer section stylings */
+
+footer {
+    width: 100%;
+    /* border: 1px solid red; */
+    height: auto;
+}
+
+footer .info {
+    height: auto;
+    background-color: #131212;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+
+footer .info .logo {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+footer .info .logo img {
+    width: 100%;
+}
+
+footer .info .text {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    margin-top: 10px;
+    max-width: 800px;
+}
+
+footer .info .content {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+}
+
+footer .info .content .box {
+    /* border: 1px solid black; */
+    padding: 10px 0;
+    width: 300px;
+    margin: 5px;
+}
+
+footer .info .content h2 {
+    border-left: 5px solid yellow;
+    padding: 0 20px;
+    color: violet;
+}
+
+footer .info .content ul {
+    margin: 10px 0;
+}
+
+footer .info .content ul li a {
+    color: white;
+    padding: 5px 20px;
+    opacity: 50%;
+    transition: all 0.5s ease;
+}
+
+footer .info .content ul li a:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
+footer .info .content .box form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+footer .info .content .box form .email {
+    background-color: transparent;
+    border: none;
+    outline: 0.5px solid rgb(107, 107, 107);
+    color: white;
+    padding: 15px 10px;
+    margin: 10px 0;
+}
+
+footer .info .content .box form .btn {
+    border: none;
+    outline: none;
+    background-color: rgb(238, 10, 10);
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer .info .content .box form .btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+footer .copyright {
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    background-color: black;
+}
+
+footer .copyright span {
+    color: red;
+}
+
+@media (max-width:700px) {
+    footer .info .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .info .content .box {
+        width: 80%;
+    }
+    footer .info .text {
+        width: 100%;
+    }
+}
