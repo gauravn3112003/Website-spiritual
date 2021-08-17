@@ -678,6 +678,79 @@ section .box .box-1 .skills .skill .skill-1 .name {
 }
 
 
+/* contact form styling */
+
+.box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    align-items: center;
+}
+
+.box form .data {
+    padding: 20px;
+    width: 50%;
+}
+
+.box form .data .input-box {
+    margin: 5px 0;
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+
+.box form .data .input-box .text {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.box form .data .input-box .input {
+    display: flex;
+    justify-content: Center;
+    margin: 5px 0;
+    /* border: 1px solid rgb(145, 242, 55); */
+}
+
+.box form .data .input-box .input .input-data {
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.box form .data .btn {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box form .data .btn .btn-sub {
+    padding: 20px 50px;
+    color: var(--btn-color);
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: var(--btn-background);
+    transition: all 0.5s ease;
+}
+
+.box form .data .btn .btn-sub:hover {
+    background-color: var(--btn-hover-background);
+}
+
+@media (max-width:700px) {
+    .box form .data {
+        width: 100%;
+    }
+}
+
+
 /* footer section stylings */
 
 footer {
@@ -764,7 +837,8 @@ footer .info .content .box form .email {
     border: none;
     outline: 0.5px solid rgb(107, 107, 107);
     color: white;
-    padding: 15px 10px;
+    padding: 15px 5px;
+    width: 96%;
     margin: 10px 0;
 }
 
@@ -774,6 +848,7 @@ footer .info .content .box form .btn {
     background-color: rgb(238, 10, 10);
     padding: 10px;
     cursor: pointer;
+    width: 100%;
     color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
